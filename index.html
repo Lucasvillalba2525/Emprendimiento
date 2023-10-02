@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8;
+        }
+
+        .bd-mode-toggle {
+            z-index: 1500;
+        }
+
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <header class="d-flex justify-content-center py-3">
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+                    <!-- <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li> -->
+                    <li class="nav-item"><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+                </ul>
+            </header>
+        </div>
+    </header>
+    <main>
+        <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <!-- <svg class="bd-placeholder-img" width="100%" height="100%"
+                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+                    </svg> -->
+                    <img class="bd-placeholder-img"
+                        src="https://lh3.googleusercontent.com/pw/ADCreHfNrMnEpPEv7CabUMn253G47M2cYpNv4OELyka6QehT_ce5oZvpTkgQAmUGkKjkTfFPXArRrM5NpKd8_yoLnL8iQ6G9O64yirqzcvWgLoTlGtUvz_r5srC9jT5Gd6VaULBoWfsBt4mH08qKDABkgDpySQ=w889-h667-s-no?authuser=0"
+                        alt="foto muestra" width="100%" height="400">
+                </div>
+                <div class="carousel-item">
+                    <img class="bd-placeholder-img"
+                        src="https://lh3.googleusercontent.com/pw/ADCreHdF_RCMNOi1ignAmKr20UjfQU3Mbf8ZLoM1urAt8bjQV9795yJGXgDYXbXQn9aTeJVzp-iIe2V-Rq3YQMdpqirOMbI6LeA8J9WrAakucpyAew6-mvL7UOULm4vOXO3M5teMXwasrJTzEa7S8dGDhWS61g=w889-h667-s-no?authuser=0"
+                        alt="foto muestra" width="100%" height="400">
+                </div>
+                <div class="carousel-item">
+                    <img class="bd-placeholder-img"
+                        src="https://lh3.googleusercontent.com/pw/ADCreHfaPYz7EVihDsPk3nvon6jDLx-IKx9cpeunI_a4wogPolDw_bIbRNhXZPi6odMejGNHW7M00Kmoqxpd-5I-yUoc7NyrXEV59_SfHlZclNm7LHfKElfxU0yFxEuEGZmWvqVJt5G06uLAjSuPiZ_D7SdmDw=w889-h667-s-no?authuser=0"
+                        alt="foto muestra" width="100%" height="400">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="album py-5 bg-body-tertiary">
+            <div class="container">
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img class="bd-placeholder-img"
+                                src="https://lh3.googleusercontent.com/pw/ADCreHdcED3rdQ--UGMu8iOyeVYsI6GKWvUcPW01_TR5cK-wLhFS6U57QK9Pjtl4OmqCAiEewaEuom80Wn_Gk6XPBzqI2a6YRqzsO5NgeQ9GuI-cLNEVXAkoW8RMIEhLlvzyUNobSdgEuXLIusPEzLc-Z2cYIg=w889-h667-s-no?authuser=0"
+                                alt="foto muestra" width="100%" height="225">
+                            <div class="card-body">
+                                <h5 class="card-text">Coulotte Less</h5>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a href="coulotteLess.html" class="nav-link">Mas Modelos</a></button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <!-- <small class="text-body-secondary">9 mins</small> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img class="bd-placeholder-img"
+                                src="https://lh3.googleusercontent.com/pw/ADCreHfBRis2g_z0D-dBmQi69eLhveR2_vJP8fNCHqehC-H9zsNJ_QqWnPPNu8kT-cK9ov9xi6kRycZEMXCOaIyFddTi9loWvWSHz2y_mk8TDtcfCVl-2ypBY8C725eTHimvW3BqGlsi2l-hNMylr6bgS8ni3Q=w889-h667-s-no?authuser=0"
+                                alt="foto muestra" width="100%" height="225">
+                            <div class="card-body">
+                                <h5 class="card-text">Tanga</h5>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a href="tanga.html" class="nav-link">Mas Modelos</a></button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <!-- <small class="text-body-secondary">9 mins</small> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img class="bd-placeholder-img"
+                                src="https://lh3.googleusercontent.com/pw/ADCreHevrSs5wkgpeuJlnnBRMRKNXTqpYn0CdIkksx3mbnPt6xeCdLfBxENZ4MI6t7yH2X2Tnn7ygIJuSmNAJR9e9B9BZr934tWCcIXe6t1Iz1tyPA44xoHkxfsWUhyg5LRzE48tpbtEfjUp9R5jqJnWUHErdg=w889-h667-s-no?authuser=0"
+                                alt="foto muestra" width="100%" height="225">
+                            <div class="card-body">
+                                <h5 class="card-text">Coulette</h5>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a href="coulette.html" class="nav-link">Mas Modelos</a></button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <!-- <small class="text-body-secondary">9 mins</small> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img class="bd-placeholder-img"
+                                src="https://lh3.googleusercontent.com/pw/ADCreHfaPYz7EVihDsPk3nvon6jDLx-IKx9cpeunI_a4wogPolDw_bIbRNhXZPi6odMejGNHW7M00Kmoqxpd-5I-yUoc7NyrXEV59_SfHlZclNm7LHfKElfxU0yFxEuEGZmWvqVJt5G06uLAjSuPiZ_D7SdmDw=w889-h667-s-no?authuser=0"
+                                alt="foto muestra" width="100%" height="225">
+                            <div class="card-body">
+                                <h5 class="card-text">Universal</h5>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a href="universal.html" class="nav-link">Mas Modelos</a></button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <!-- <small class="text-body-secondary">9 mins</small> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img class="bd-placeholder-img"
+                                src="https://lh3.googleusercontent.com/pw/ADCreHcxFMi-VEnOQ0QZWjWMijCVRaq6AWQjqQcB8Jd2m_hAfhC0ah2YZ3bYdAkjDsJzLm1QV9C7679l2FKsu2RtOsIrhkOEJ44eDlG5X5mgVoWHhZCG6MXpZ6OJ-N_-b-rEKt1-vspN7UbOIT-bfuqZW781nQ=w889-h667-s-no?authuser=0"
+                                alt="foto muestra" width="100%" height="225">
+                            <div class="card-body">
+                                <h5 class="card-text">Vedetina</h5>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a href="vedetina.html" class="nav-link">Mas Modelos</a></button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <!-- <small class="text-body-secondary">9 mins</small> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img class="bd-placeholder-img"
+                                src="https://lh3.googleusercontent.com/pw/ADCreHc6F31Vh0OTeEiA2hDaHjZFLXquIWxPbQKCa-osfUVtFLbAz6Vh7XBmxdlubGrGi_OMLt6PfKD4_VgSO_YGIKMBRX0cz4m-tYonbYrTpZ-XNO9f3mV7BTbk8zj1Pjy8ES5pnsp6BhOx4mMdR4MBQjXEDg=w889-h667-s-no?authuser=0"
+                                alt="foto muestra" width="100%" height="225">
+                            <div class="card-body">
+                                <h5 class="card-text">Coulette De Nena</h5>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a href="couletteDeNena.html" class="nav-link">Mas Modelos</a></button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <!-- <small class="text-body-secondary">9 mins</small> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img class="bd-placeholder-img"
+                                src="https://lh3.googleusercontent.com/pw/ADCreHcPeeO_qmT5il-oVewrW2g-Qdz7zKVbMtWiDp0V_6SRDdI660HrGwtSqWgaQhfS-9W4Y2tbwNK7qYzZ6Mepr1GH835moA3oHPGWiJnvZARWd4TdwjTFzX8Aif5GKC4JcDHXuzi65PxpL7Y2vhIXu8Zxlw=w889-h667-s-no?authuser=0"
+                                alt="foto muestra" width="100%" height="225">
+                            <div class="card-body">
+                                <h5 class="card-text">Talle Unico</h5>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a href="tallaUnica.html" class="nav-link">Mas Modelos</a></button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <!-- <small class="text-body-secondary">9 mins</small> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img class="bd-placeholder-img"
+                                src="https://lh3.googleusercontent.com/pw/ADCreHepraOwW0OSizl6QiWk1FOM_E2Htf5wfuNbJbDc9h3zt2nh3iqafFJAIl0JLX46BZrEkyXYiHS0YJhmXuevsXc7T4ivYrI2wkKuTTiWa5TOuijFZdcgXzkiOXfJ5ZTkkBrzAdG6ZW2ULnYPkP9HeAX6dw=w889-h667-s-no?authuser=0"
+                                alt="foto muestra" width="100%" height="225">
+                            <div class="card-body">
+                                <h5 class="card-text">Vedetina De Puntilla</h5>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a href="vedetinaPuntilla.html" class="nav-link">Mas Modelos</a></button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <!-- <small class="text-body-secondary">9 mins</small> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img class="bd-placeholder-img"
+                                src="https://lh3.googleusercontent.com/pw/ADCreHfsA-NiKuRFhScwx24PbXY2uyglf1vjcedm8Q_RzCsSi1B10HsqQyyNHfZxhXLafBL0OjRnnk0Dcovwlx7zOGQjaKuhVn_sXkVID-5wiRu3nP_UXh01I1DjpaOqXjRyG4gRPX9eTcswqZn9-LutoMXm5w=w889-h667-s-no?authuser=0"
+                                alt="foto muestra" width="100%" height="225">
+                            <div class="card-body">
+                                <h5 class="card-text">Colaless</h5>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a href="colaless.html" class="nav-link">Mas Modelos</a></button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <!-- <small class="text-body-secondary">9 mins</small> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img class="bd-placeholder-img"
+                                src="https://lh3.googleusercontent.com/pw/ADCreHfMzlsbXdFSHtdDRsl2GLdlCqpTcafPU2Jc_NNszb3HXrKtIrFLdxB0NbSIdJ4CoOL9a4Xl5twTHO67LsbkNmppx8Xto5ndGHTIO0RmmrgUYyiHCL23ueViO7qKROheN2GPU2esNeV7ugRLdDReUKUU8Q=w889-h667-s-no?authuser=0"
+                                alt="foto muestra" width="100%" height="225">
+                            <div class="card-body">
+                                <h5 class="card-text">Bombacha De Nena</h5>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a href="bombachaNena.html" class="nav-link">Mas Modelos</a></button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <!-- <small class="text-body-secondary">9 mins</small> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img class="bd-placeholder-img"
+                                src="https://lh3.googleusercontent.com/pw/ADCreHcxFMi-VEnOQ0QZWjWMijCVRaq6AWQjqQcB8Jd2m_hAfhC0ah2YZ3bYdAkjDsJzLm1QV9C7679l2FKsu2RtOsIrhkOEJ44eDlG5X5mgVoWHhZCG6MXpZ6OJ-N_-b-rEKt1-vspN7UbOIT-bfuqZW781nQ=w889-h667-s-no?authuser=0"
+                                alt="foto muestra" width="100%" height="225">
+                            <div class="card-body">
+                                <h5 class="card-text">Vikini</h5>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a href="vikini.html" class="nav-link">Mas Modelos</a></button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <!-- <small class="text-body-secondary">9 mins</small> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
